@@ -23,16 +23,13 @@ app.post("/add", (req, res)=>{
     const result = num1 + num2;
     if(num1 < -1000000 || num2 < -1000000 || result < -1000000){
         res.send({status: "error",
-        message: "Underflow",
-        sum: result})
+        message: "Underflow"})
     }else if(num1 > 1000000 || num2 > 1000000 || result > 1000000){
         res.send({status: "error",
-        message: "Overflow",
-        sum: result})
+        message: "Overflow"})
     }else if(isNaN(num1) || isNaN(num2)){
         res.send({status: "error",
-        message: "Invalid data types",
-        sum: result})
+        message: "Invalid data types"})
     }else{
         res.send({status: "success",
         message: "the sum of given two numbers",
@@ -46,16 +43,13 @@ app.post("/sub", (req, res)=>{
     const result = num1 - num2;
     if(num1 < -1000000 || num2 < -1000000 || result < -1000000){
         res.send({status: "error",
-        message: "Underflow",
-        difference: result})
+        message: "Underflow"})
     }else if(num1 > 1000000 || num2 > 1000000 || result > 1000000){
         res.send({status: "error",
-        message: "Overflow",
-        difference: result})
+        message: "Overflow"})
     }else if(isNaN(num1) || isNaN(num2)){
         res.send({status: "error",
-        message: "Invalid data types",
-        difference: result})
+        message: "Invalid data types"})
     }else{
         res.send({status: "success",
         message: "the difference of given two numbers",
@@ -69,16 +63,13 @@ app.post("/multiply", (req, res)=>{
     const result = num1 * num2;
     if(num1 < -1000000 || num2 < -1000000 || result < -1000000){
         res.send({status: "error",
-        message: "Underflow",
-        result: result})
+        message: "Underflow"})
     }else if(num1 > 1000000 || num2 > 1000000 || result > 1000000){
         res.send({status: "error",
-        message: "Overflow",
-        result: result})
+        message: "Overflow"})
     }else if(isNaN(num1) || isNaN(num2)){
         res.send({status: "error",
-        message: "Invalid data types",
-        result: result})
+        message: "Invalid data types"})
     }else{
         res.send({status: "success",
         message: "The product of given numbers",
@@ -92,20 +83,16 @@ app.post("/divide", (req, res)=>{
     const result = num1 * num2;
     if(num1 < -1000000 || num2 < -1000000 || result < -1000000){
         res.send({status: "error",
-        message: "Underflow",
-        result: result})
+        message: "Underflow"})
     }else if(num1 > 1000000 || num2 > 1000000 || result > 1000000){
         res.send({status: "error",
-        message: "Overflow",
-        result: result})
+        message: "Overflow"})
     }else if(isNaN(num1) || isNaN(num2)){
         res.send({status: "error",
-        message: "Invalid data types",
-        result: result})
+        message: "Invalid data types"})
     }else if(num2 === 0){
         res.send({status: "error",
-        message: "Cannot divide by zero",
-        result: result})
+        message: "Cannot divide by zero"})
     }else{
         res.send({status: "success",
         message: "The division of given numbers",
