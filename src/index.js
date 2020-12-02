@@ -14,8 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 // your code goes here
 app.get("/", (req, res)=>{
-    res.writeHead(200, {'content-type': 'text/plain' });
-    res.write("Hello world!");
+    res.send("Hello world!");
     res.end();
 });
 app.post("/add", (req, res)=>{
