@@ -81,7 +81,11 @@ app.post("/divide", (req, res)=>{
     const num1 = req.body.num1;
     const num2 = req.body.num2;
     const result = num1/num2;
-    if(num1 < -1000000 || num2 < -1000000 || result < -1000000){
+     if(num2 == 0){
+        res.send({status: "error",
+        message: "Cannot divide by zero"})
+    }
+    else if(num1 < -1000000 || num2 < -1000000 || result < -1000000){
         res.send({status: "error",
         message: "Underflow"})
     }else if(num1 > 1000000 || num2 > 1000000 || result > 1000000){
@@ -90,9 +94,6 @@ app.post("/divide", (req, res)=>{
     }else if(isNaN(num1) || isNaN(num2)){
         res.send({status: "error",
         message: "Invalid data types"})
-    }else if(num2 == 0){
-        res.send({status: "error",
-        message: "Cannot divide by zero"})
     }else{
         res.send({status: "success",
         message: "The division of given numbers",
