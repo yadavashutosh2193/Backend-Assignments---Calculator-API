@@ -90,7 +90,7 @@ app.post("/divide", (req, res)=>{
     }else if(isNaN(num1) || isNaN(num2)){
         res.send({status: "error",
         message: "Invalid data types"})
-    }else if(num2 === 0){
+    }else if(num2 == 0){
         res.send({status: "error",
         message: "Cannot divide by zero"})
     }else{
