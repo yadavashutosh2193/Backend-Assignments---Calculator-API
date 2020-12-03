@@ -80,7 +80,7 @@ app.post("/multiply", (req, res)=>{
 app.post("/divide", (req, res)=>{
     const num1 = req.body.num1;
     const num2 = req.body.num2;
-    const result = num1 * num2;
+    const result = num1/num2;
     if(num1 < -1000000 || num2 < -1000000 || result < -1000000){
         res.send({status: "error",
         message: "Underflow"})
